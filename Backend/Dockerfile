@@ -10,6 +10,7 @@ COPY . .
 RUN rm dump.rdb
 
 # Setup
+RUN apt-get install libxml2-dev libxslt-dev python-dev
 RUN pip install -r requirements.txt
 
 # Finalize
