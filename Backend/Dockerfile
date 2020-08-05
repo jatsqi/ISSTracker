@@ -14,4 +14,3 @@ RUN apk update && apk add --no-cache libxml2-dev libxslt-dev
 RUN pip install -r requirements.txt
 
 # Finalize
-ENTRYPOINT python tewst
