@@ -1,4 +1,4 @@
-FROM python:3.8.5-alpine
+FROM python:3.8.5
 
 # Environment
 ENV REDISHOST="localhost"
@@ -10,7 +10,7 @@ COPY . .
 RUN rm dump.rdb
 
 # Setup
-RUN apk update && apk add --no-cache python3-lxml libxml2-dev libxslt-dev
+RUN apk update && apk add --no-cache libxml2-dev libxslt-dev
 RUN pip install -r requirements.txt
 
 # Finalize
